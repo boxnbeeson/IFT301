@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+/* Desktop Navigation Styles */
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Mobile Navigation Styles */
+nav#mobile {
+    display: none;
+}
+nav#mobile a {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    flex-grow: 1;
+    aspect-ratio: 1 / 1;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav#mobile a[href="#century_hall"] {
+    background-image: url("century_hall.jpg");
+}
+
+nav#mobile a[href="#lantana_hall"] {
+    background-image: url("lantana_hall.jpg");
+}
+
+nav#mobile a[href="#village"] {
+    background-image: url("village.jpg");
+}
+
+nav#mobile a[href="#north"] {
+    background-image: url("north.jpg");
+}
+
+nav#mobile a[href="#palo_blanco"] {
+    background-image: url("palo_blanco.jpg");
+}
+
+nav#mobile a[href="#cabana"] {
+    background-image: url("cabana.jpg");
+}
+
+/* Section Styles */
+section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: start;
+}
+section h2 {
+    width: 100%;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+
+
+/* Footer Styles */
+ footer {
+    max-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+ }
+
+
+/* General Styles (up to 1024px) */
+@media screen and (max-width: 1024px) {
+    header nav {
+        display: none;
+    }
+    nav#mobile {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        min-height: 300px;
+    }
+    img, section > aside {
+        display: none;
+    }
+    section > article {
+        max-width: 100%;
+    }
+}
+
+
+/* Mobile Styles (up to 767) */
+@media screen and (max-width: 767px) {
+    header > h1 {
+        line-height: 1.3em;
+        font-size: 1.5em;
+    }
+    nav#mobile a {
+        flex-basis: 40%;
+    }
+    section h2 {
+        line-height: 1.3em;
+    }
+    footer {
+        max-height: none;
+        flex-direction: column-reverse;
+    }
+}
+
+
+/* Tablet Styles (between 767 and 1024px) */
+@media (min-width:767px) and (max-width:1024px) {
+    nav#mobile a {
+        flex-basis: 30%;
+    }
+}
+

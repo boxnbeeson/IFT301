@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+/* Font Faces */
+@font-face {
+    font-family: "Bebas Neue";
+    src: url(BebasNeue-Regular.ttf);
+}
+@font-face {
+    font-family: "Familjen Grotesk";
+    font-weight: normal;
+    font-style: normal;
+    src: url(FamiljenGrotesk-Regular.ttf);
+}
+@font-face {
+    font-family: "Familjen Grotesk";
+    font-weight: normal;
+    font-style: italic;
+    src: url(FamiljenGrotesk-Italic.ttf);
+}
+@font-face {
+    font-family: "Familjen Grotesk";
+    font-weight: bold;
+    font-style: normal;
+    src: url(FamiljenGrotesk-Bold.ttf);
+}
+@font-face {
+    font-family: "Familjen Grotesk";
+    font-weight: bold;
+    font-style: italic;
+    src: url(FamiljenGrotesk-BoldItalic.ttf);
+}
+
+/* Structural Styles */
+html {
+    background-color: #8c1d40;
+}
+body {
+    background-color: white;
+    font-family: "Familjen Grotesk", sans-serif;
+}
+footer {
+    background-color: #ffc627;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+address {
+    font-style: normal;
+    font-size: 0.9em;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Heading Styles */
+h1, h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-style: normal;
+}
+
+
+/* Navigation Styles */
+    nav > ul {
+        list-style-type: none;
+        line-height: 2em;
+        font-size: 0.9em;
+        padding-left: 0px;
+    }
+    nav > ul > li > a {
+        text-decoration: none;
+        color: #8c1d40;
+        padding-left: 40px;
+    }
+    nav > ul > li > a:hover, a:active {
+        background-color: #8c1d40;
+        color: white;
+    }
+
+
+/* Article Styles */
+    #main_information > h1 {
+        font-size: 220%;
+        letter-spacing: .1em;
+    }
+    #main_information > h2 {
+        font-size: 160%;
+    }
+    #main_information > p {
+        font-size: 110%;
+    }
+    #main_information > p:first-of-type::first-line {
+        font-variant: small-caps;
+        font-size: 120%;
+    }
+
+/* Aside Styles */
+    #schedule {
+        background-color: #eeeeee;
+        padding: 10px;
+    }
+    #schedule > h1 {
+        font-size: 150%;
+    }
+    #schedule > h2 {
+        font-size: 110%;
+    }
+    #schedule > p {
+        font-size: 90%;
+    }
+    #schedule > p {
+        font-size: 90%;
+    }
+    #schedule > p.date-time {
+        color: #8c1d40;
+        font-weight: bold;
+    }
+
+/* Footer Styles */
+    footer > address > a {
+        color: black;
+    }
