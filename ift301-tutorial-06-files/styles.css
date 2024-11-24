@@ -1,0 +1,172 @@
+@charset "utf-8";
+
+/* Mobile Navigation Styles */
+#menuIcon {
+	display: none;
+}
+#menuCheck {
+	display: none;
+}
+
+
+/* Search Bar Styles */
+#searchBar {
+	margin-left: auto !important;
+	display: flex;
+	align-items: center;
+	border: solid 1px;
+	border-color: #aaaaaa;
+	border-radius: .3em;
+	overflow: hidden;
+}
+
+#searchBar:focus-within {
+	border: solid 1px;
+	border-color: #333333;
+}
+
+#searchBox {
+	border: none !important;
+	outline: none !important;
+}
+
+#searchButton {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #eeeeee;
+}
+
+
+
+/* Table Styles */
+table {
+	width: 100%;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+tr:nth-of-type(even) {
+    background-color: #eeeeee;
+}
+td, th {
+    padding: .5em;
+	border: 1px solid;
+	border-color: #aaaaaa;
+	font-size: .90em;
+}
+th {
+	text-align: left;
+	position: relative;
+	padding-right: 1em;
+}
+th::after {
+	content: url("sort.png");
+	position: absolute;
+	right: 5px;
+	top: 50%;
+	transform: translateY(-50%);
+	height: 20px;
+	width: 15px;
+	cursor: pointer;
+}
+
+
+/* General Styles (up to 1024px) */
+@media screen and (max-width: 1024px) {
+	/* Mobile Navigation Styles */
+	#menuIcon {
+		display: block;
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		z-index: 2;
+	}
+	#menuIcon > img {
+		max-height: 30px;
+	}
+	#menuIcon .close-icon {
+		display: none;
+	}
+	#menuCheck {
+		height: 0px;
+		width: 0px;
+		opacity: 0;
+		visibility: hidden;
+	}
+	#menuCheck:checked ~ #menuIcon .close-icon {
+		display: inline-block;
+	}
+	#menuCheck:checked ~ #menuIcon .menu-bars {
+		display: none;
+	}
+
+	header nav {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		overflow: hidden;
+		height: 0;
+		z-index: 1;
+		transition: 0.4s ease-in-out;
+	}
+
+	header nav a {
+		width: 100%;
+		text-align: center;
+		border-bottom: 1px solid;
+		border-color: white;
+	}
+	header nav a:last-child{
+		border-bottom: none;
+	}
+	#menuCheck:checked ~ nav {
+		height: 100vh !important;
+	}
+	/* Mobile Table Styles */
+	table, thead, tbody, tr, td, th {
+		display: block;
+	}
+	thead tr {
+		position: absolute;
+		left: -9999px;
+		top: -9999px;
+	}
+	tr {
+		border: 1px solid;
+		border-color: #aaaaaa;
+	}
+	td {
+		padding-left: 35%;
+		word-break: break-word;
+		border: none;
+		border-bottom: 1px solid #cccccc;
+		position: relative;
+	}
+	td::before {
+		position: absolute;
+		left: 5px;
+		top: 50%;
+		transform: translateY(-50%);
+		font-weight: bold;
+	}
+	td:nth-of-type(1)::before {
+		content: 'First Name';
+	}
+	td:nth-of-type(2)::before {
+		content: 'Last Name';
+	}
+	td:nth-of-type(3)::before {
+		content: 'Grad Year';
+	}
+	td:nth-of-type(4)::before {
+		content: 'Email';
+	}
+	td:nth-of-type(5)::before {
+		content: 'Location';
+	}
+}
+	
